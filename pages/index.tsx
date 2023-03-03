@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { useCeramicContext } from '../context';
 import { PostProps } from '../types';
 
+import { Web3Button } from "@web3modal/react";
+
 import Head from 'next/head'
 
 import Post from "../components/post.component"
@@ -211,6 +213,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="content">
         <div className={styles.share}>
+          <Web3Button />
           <textarea
             value={newPost}
             maxLength={100}

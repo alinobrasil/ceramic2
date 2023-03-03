@@ -22,6 +22,8 @@
     "@composedb/devtools-node": "^0.4.3",
     "@didtools/cacao": "2.0.0",
     "@didtools/pkh-ethereum": "0.1.0",
+    "@web3modal/ethereum": "^2.1.3",
+    "@web3modal/react": "^2.1.3",
     "chalk": "^5.1.2",
     "did-session": "^1.0.0",
     "dids": "^3.2.0",
@@ -31,7 +33,8 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.7.1",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "wagmi": "^0.11.7"
   },
   "devDependencies": {
     "@composedb/types": "^0.3.0",

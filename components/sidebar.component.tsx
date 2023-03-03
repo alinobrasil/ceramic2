@@ -7,27 +7,27 @@ import { SidebarProps } from '../types';
 
 
 
-export const Sidebar = ({name, username, id}: SidebarProps) => {
+export const Sidebar = ({ name, username, id }: SidebarProps) => {
 
   return (
     <div className="sidebar">
       <div className="top">
         <div className="logoContainer">
-          <Image
-            src={ceramicLogo}
-          />
+          <div>
+            Ceramic template
+          </div>
         </div>
-        <Link href = {`/profile`}>
+        <Link href={`/profile`}>
           <a>
             <FaUser /> 1. Profile
           </a>
         </Link>
-        <Link href = "/">
+        <Link href="/">
           <a>
             <FaHome /> 2. Post
           </a>
         </Link>
-        <Link href = "/explore">
+        <Link href="/explore">
           <a>
             <FaHashtag /> 3. Explore
           </a>
@@ -37,9 +37,9 @@ export const Sidebar = ({name, username, id}: SidebarProps) => {
         {name !== undefined ? (
           <div className="you">
             <b>{name}</b> <br />
-            <Link href = {`user/${id}`}>
+            <Link href={`user/${id}`}>
               <a>
-              @{username}
+                @{username}
               </a>
             </Link>
           </div>

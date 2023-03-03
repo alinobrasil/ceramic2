@@ -1,3 +1,33 @@
+
+## how to use this
+
+THere's a lot of stuff going on here.
+-ceramic node
+-graphiql server
+-next js frontend app
+
+If you run npm run dev, it's gonna first create composites based on what's in your composites folder. Any new models in there should get indexed.
+
+But if you need to restart webapp for any reason, gotta boot up ceramic node all over even when you are not gonna add new composites.
+
+Better to do thish when developing:
+Run ceramic node on its own:
+
+```npm run ceramic```
+
+This can take several minutes.
+
+Then run graphiql server separately:
+```npx composedb graphql:server --ceramic-url=http://localhost:7007 --graphiql runtime-composite.json --did-private-key=your_private_key --port=5005```
+
+Then run next js app.
+```npm run nextDev```
+Takes only a few seconds to run next app.
+
+
+
+
+
 # EthDenver 2023 Demo instructions
 Due to the nature of the Ceramic Daemon certain files must be updated to work with your local machine. Please follow the following directions carefully to ensure functionality.
 1. Clone the repository.
