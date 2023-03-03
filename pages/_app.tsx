@@ -2,7 +2,7 @@ import '../styles/globals.scss'
 import { Sidebar } from "../components/sidebar.component"
 import { Footer } from '../components/footer.component';
 
-import {CeramicWrapper} from "../context";
+import { CeramicWrapper } from "../context";
 import type { AppProps } from 'next/app'
 
 import { useState, useEffect } from "react"
@@ -26,12 +26,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const [profile, setProfile] = useState<Profile | undefined>()
 
   const handleLogin = async () => {
-    await authenticateCeramic(ceramic,composeClient)
+    await authenticateCeramic(ceramic, composeClient)
     await getProfile()
   }
 
   const getProfile = async () => {
-    if(ceramic.did !== undefined) {
+    if (ceramic.did !== undefined) {
       const profile = await composeClient.executeQuery(`
         query {
           viewer {
@@ -45,24 +45,24 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         }
       `);
       localStorage.setItem("viewer", profile?.data?.viewer?.id)
-      
+
       setProfile(profile?.data?.viewer?.basicProfile)
     }
   }
   // Update to include refresh on auth
   useEffect(() => {
-    if(localStorage.getItem('did')) {
+    if (localStorage.getItem('did')) {
       handleLogin()
       getProfile()
     } else {
       handleLogin()
     }
-  }, [ ])
+  }, [])
 
   return (
     <div className="container">
       <CeramicWrapper>
-        <Sidebar name = {profile?.name} username = {profile?.username} id={profile?.id}/>
+        <Sidebar name={profile?.name} username={profile?.username} id={profile?.id} />
         <div className="body">
           <Component {...pageProps} ceramic />
           <Footer />
