@@ -3,6 +3,7 @@ import { EthereumWebAuth, getAccountId } from "@didtools/pkh-ethereum";
 import type { CeramicApi } from "@ceramicnetwork/common"
 import type { ComposeClient } from "@composedb/client";
 
+
 // If you are relying on an injected provider this must be here otherwise you will have a type error. 
 declare global {
   interface Window {
@@ -16,13 +17,15 @@ declare global {
  */
 export const authenticateCeramic = async (ceramic: CeramicApi, compose: ComposeClient) => {
   const sessionStr = localStorage.getItem('did') // for production you will want a better place than localStorage for your sessions.
+  console.log("sessionStr from localStorage: ", sessionStr)
   let session
 
-  if(sessionStr) {
+
+  if (sessionStr) {
     session = await DIDSession.fromSession(sessionStr)
   }
 
-  if(!session || (session.hasSession && session.isExpired)) {
+  if (!session || (session.hasSession && session.isExpired)) {
     if (window.ethereum === null || window.ethereum === undefined) {
       throw new Error("No injected Ethereum provider found.");
     }
@@ -41,7 +44,7 @@ export const authenticateCeramic = async (ceramic: CeramicApi, compose: ComposeC
      * @NOTE: Any production applications will want to provide a more complete list of capabilities.
      *        This is not done here to allow you to add more datamodels to your application.
      */
-    session = await DIDSession.authorize(authMethod, {resources: ["ceramic://*"]})
+    session = await DIDSession.authorize(authMethod, { resources: ["ceramic://*"] })
     // Set the session in localStorage.
     localStorage.setItem('did', session.serialize());
   }

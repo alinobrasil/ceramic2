@@ -1,3 +1,6 @@
+import Head from 'next/head'
+import Post from "../components/post.component"
+import styles from "../styles/Home.module.scss"
 import type { NextPage } from 'next'
 import { useEffect, useState } from 'react';
 
@@ -5,12 +8,9 @@ import { useCeramicContext } from '../context';
 import { PostProps } from '../types';
 
 import { Web3Button } from "@web3modal/react";
+import { useAccount } from "wagmi";
 
-import Head from 'next/head'
-
-import Post from "../components/post.component"
-import styles from "../styles/Home.module.scss"
-
+console.log("Homepage...")
 
 const Home: NextPage = () => {
   const clients = useCeramicContext()
@@ -18,6 +18,18 @@ const Home: NextPage = () => {
   const [newPost, setNewPost] = useState('')
   const [posts, setPosts] = useState<PostProps[] | []>([])
 
+  const { address, isConnected } = useAccount()
+  // const { isConnected } = useAccount();
+
+  console.log("address...", address)
+
+  useEffect(() => {
+    // Fetch listings on page load once wallet connection exists
+    // if (isConnected) {
+    //   do stuff
+    // }
+    console.log("connection status...", isConnected)
+  }, []);
 
 
   const createTermsheet = async () => {

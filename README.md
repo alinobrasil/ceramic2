@@ -1,6 +1,5 @@
 
 ## how to use this
-
 THere's a lot of stuff going on here.
 -ceramic node
 -graphiql server
@@ -23,9 +22,6 @@ Then run graphiql server separately:
 Then run next js app.
 ```npm run nextDev```
 Takes only a few seconds to run next app.
-
-
-
 
 
 # EthDenver 2023 Demo instructions

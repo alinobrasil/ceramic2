@@ -24,14 +24,14 @@ import {
   mainnet, polygon
 } from "wagmi/chains";
 
-// wallet configuration
+// walletconnect configuration
 const chains = [goerli];
 const YOUR_PROJECT_ID = "5f37f72f86b701ddc31e91ef39dcc291"
+
 // Wagmi client
 const { provider } = configureChains(chains, [
   walletConnectProvider({ projectId: YOUR_PROJECT_ID }),
 ]);
-
 const wagmiClient = createClient({
   autoConnect: true,
   connectors: modalConnectors({
@@ -43,9 +43,9 @@ const wagmiClient = createClient({
   provider,
 });
 
-// Web3Modal Ethereum Client
-const ethereumClient = new EthereumClient(wagmiClient, chains);
 
+// // Web3Modal Ethereum Client
+const ethereumClient = new EthereumClient(wagmiClient, chains);
 
 
 // decentra twitter composedb type
@@ -109,6 +109,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <div className="container">
 
       <CeramicWrapper>
+
         <Sidebar
           name={profile?.name}
           username={profile?.username}
@@ -118,8 +119,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <WagmiConfig client={wagmiClient}>
             <Component {...pageProps} ceramic />
           </WagmiConfig>
-          <Footer />
+
+
         </div>
+
       </CeramicWrapper>
 
       <Web3Modal
