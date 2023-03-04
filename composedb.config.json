@@ -30,6 +30,9 @@
   "indexing": {
     "db": "sqlite:.ceramic/indexing.sqlite",
     "allow-queries-before-historical-sync": true,
-    "models": []
+    "enable-historical-sync": false,
+    "models": [
+      "kjzl6hvfrbw6c9aw41pwc90krydjeg1cnz6d470ecm635qvmncokqqirgnlcurc"
+    ]
   }
 }

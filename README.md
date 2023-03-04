@@ -9,12 +9,12 @@ This contains the ceramic node and graphiql server required to use composedb.
 This can take several minutes. 
 If you need to deploy new composites (new schemas), there's some other stuff you need to do. Will get to that.
 
-
-2. Get graphiql server up, using ceramic privatekey
-
-
+2. Deploy composite
 ```export DPK=39692c9a7e6a8a24061d3ebf4f1905e0eb05cb879908b2e896cce3f2fb396723```
+```npx composedb composite:deploy output/composite.json --ceramic-url=http://localhost:7007 --did-private-key=$DPK```
 
+
+3. Get graphiql server up, using ceramic privatekey
 ```npx composedb graphql:server --ceramic-url=http://localhost:7007 --graphiql runtime-composite.json --did-private-key=$DPK --port=5005```
 
 
@@ -27,9 +27,10 @@ If you run "npm run dev", it's going to load up an unnecessary nextJS app.
 ## How to add new models
 
 1. Create composite from your model. 
+```export DPK=39692c9a7e6a8a24061d3ebf4f1905e0eb05cb879908b2e896cce3f2fb396723```
 ```npx composedb composite:create composites/<modelname>.graphql --output=output/composite.json --ceramic-url=http://localhost:7007 --did-private-key=$DPK```
 
-You can find your model ID by running 
+THe output file contains modelID. 
 
 2. deploy composite
 ```npx composedb composite:deploy output/composite.json --ceramic-url=http://localhost:7007 --did-private-key=$DPK```
