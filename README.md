@@ -1,28 +1,44 @@
 
 ## how to use this
-This project contains:
--ceramic node
--graphiql server
--next js frontend app
+This contains the ceramic node and graphiql server required to use composedb.
 
-If you run npm run dev, it's gonna first create composites based on what's in your composites folder. Any new models in there should get indexed. Then it'll boot up cermaic node, then graphiql server, then a webapp.
-
-But if you need to restart webapp for any reason, gotta boot up ceramic node all over even when you are not gonna add new composites.
-
-
-Run ceramic node on its own:
+1. Run ceramic node on its own:
 
 ```npm run ceramic```
 
-This can take several minutes. If you need to deploy new composites (new schemas), there's some other stuff you need to do:
+This can take several minutes. 
+If you need to deploy new composites (new schemas), there's some other stuff you need to do. Will get to that.
 
 
-Then run graphiql server separately:
-```npx composedb graphql:server --ceramic-url=http://localhost:7007 --graphiql runtime-composite.json --did-private-key=your_private_key --port=5005```
+2. Get graphiql server up, using ceramic privatekey
 
-Then run next js app.
-```npm run nextDev```
-Takes only a few seconds to run next app.
+
+```export DPK=39692c9a7e6a8a24061d3ebf4f1905e0eb05cb879908b2e896cce3f2fb396723```
+
+```npx composedb graphql:server --ceramic-url=http://localhost:7007 --graphiql runtime-composite.json --did-private-key=$DPK --port=5005```
+
+
 
 This project contains stuff from ceramic's eth denver workshop:
 https://github.com/ceramicstudio/ethdenver-workshop
+
+If you run "npm run dev", it's going to load up an unnecessary nextJS app. 
+
+## How to add new models
+
+1. Create composite from your model. 
+```npx composedb composite:create composites/<modelname>.graphql --output=output/composite.json --ceramic-url=http://localhost:7007 --did-private-key=$DPK```
+
+You can find your model ID by running 
+
+2. deploy composite
+```npx composedb composite:deploy output/composite.json --ceramic-url=http://localhost:7007 --did-private-key=$DPK```
+
+3. create run-time composite files
+```npx composedb composite:compile output/composite.json runtime-composite.json```
+```npx composedb composite:compile output/composite.json runtime-composite.js```
+
+4. The JS one is needed by the IRL-trust project's front end app. 
+Copy and paste it into IRL-Trust/src/composedb/
+
+
