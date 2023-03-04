@@ -1,0 +1,26 @@
+{
+    "version": "1.0",
+    "models": {
+        "kjzl6hvfrbw6c9aw41pwc90krydjeg1cnz6d470ecm635qvmncokqqirgnlcurc": [
+            {
+                "jws": {
+                    "payload": "AXESINxWS0HUmlHvfPZxEVHgXUX-1vuRWqc091G6akfBHM1L",
+                    "signatures": [
+                        {
+                            "signature": "670USQy_6AAr-wTI5vMJODbxfEz4P_ww-Aj00DgNhtZhvPzh4NYe1y1bQOYH-_67_bYOZMHgQ6iipV7pQXSLCg",
+                            "protected": "eyJhbGciOiJFZERTQSIsImtpZCI6ImRpZDprZXk6ejZNa2Z1aWdKSDdEWFA2UGlZcE1WTHZzWDFBazJDWUttTUVYNDg4ekN1Yjl0dndQI3o2TWtmdWlnSkg3RFhQNlBpWXBNVkx2c1gxQWsyQ1lLbU1FWDQ4OHpDdWI5dHZ3UCJ9"
+                        }
+                    ],
+                    "link": "bafyreig4kzfudve2khxxz5trcfi6axkf73lpxek2u42poun2njd4chgnjm"
+                },
+                "linkedBlock": "omRkYXRhp2RuYW1lbklybF9UZXJtX1NoZWV0ZXZpZXdzoGZzY2hlbWGlZHR5cGVmb2JqZWN0ZyRzY2hlbWF4LGh0dHBzOi8vanNvbi1zY2hlbWEub3JnL2RyYWZ0LzIwMjAtMTIvc2NoZW1haHJlcXVpcmVkiGhQb29sTmFtZXBUZXJtc0Rlc2NyaXB0aW9ub0Ftb3VudFBlclBlcmlvZGtMb2FuRW5kRGF0ZWNBUFJyUmVwYXltZW50U3RhcnREYXRlcFJlcGF5bWVudEVuZERhdGVjVVJManByb3BlcnRpZXOrY0FQUqNkdHlwZWZzdHJpbmdpbWF4TGVuZ3RoCmltaW5MZW5ndGgDY1VSTKNkdHlwZWZzdHJpbmdpbWF4TGVuZ3RoGQH0aW1pbkxlbmd0aANoUG9vbE5hbWWjZHR5cGVmc3RyaW5naW1heExlbmd0aBkB9GltaW5MZW5ndGgDakxvYW5QYWlkVG+jZHR5cGVmc3RyaW5naW1heExlbmd0aBkB9GltaW5MZW5ndGgDa0RlZmF1bHREYXlzo2R0eXBlZnN0cmluZ2ltYXhMZW5ndGgYZGltaW5MZW5ndGgBa0xvYW5FbmREYXRlo2R0eXBlZnN0cmluZ2ltYXhMZW5ndGgYZGltaW5MZW5ndGgDb0Ftb3VudFBlclBlcmlvZKNkdHlwZWZzdHJpbmdpbWF4TGVuZ3RoGGRpbWluTGVuZ3RoA3BSZXBheW1lbnRFbmREYXRlo2R0eXBlZnN0cmluZ2ltYXhMZW5ndGgYZGltaW5MZW5ndGgDcFRlcm1zRGVzY3JpcHRpb26jZHR5cGVmc3RyaW5naW1heExlbmd0aBkB9GltaW5MZW5ndGgDcUF1dGhvcml6ZWRMZW5kZXJzo2R0eXBlZnN0cmluZ2ltYXhMZW5ndGgZAfRpbWluTGVuZ3RoA3JSZXBheW1lbnRTdGFydERhdGWjZHR5cGVmc3RyaW5naW1heExlbmd0aBhkaW1pbkxlbmd0aAN0YWRkaXRpb25hbFByb3BlcnRpZXP0Z3ZlcnNpb25jMS4waXJlbGF0aW9uc6BrZGVzY3JpcHRpb254KklSTC1UcnVzdCBUZXJtIFNoZWV0IGZvciBib3Jyb3dpbmcvbGVuZGluZ29hY2NvdW50UmVsYXRpb26hZHR5cGVkbGlzdGZoZWFkZXKjY3NlcGVtb2RlbGVtb2RlbFLOAQQBcXELAAlobW9kZWwtdjFrY29udHJvbGxlcnOBeDhkaWQ6a2V5Ono2TWtmdWlnSkg3RFhQNlBpWXBNVkx2c1gxQWsyQ1lLbU1FWDQ4OHpDdWI5dHZ3UA=="
+            }
+        ]
+    },
+    "aliases": {},
+    "views": {
+        "account": {},
+        "root": {},
+        "models": {}
+    }
+}

@@ -1,14 +1,14 @@
 {
     "models": {
-        "TermSheet": {
-            "id": "kjzl6hvfrbw6c9s8z4ghkxnfjha6xzdnitdjl912jwt2812obn08c7ratu1j1ie",
+        "Irl_Term_Sheet": {
+            "id": "kjzl6hvfrbw6c9aw41pwc90krydjeg1cnz6d470ecm635qvmncokqqirgnlcurc",
             "accountRelation": {
                 "type": "list"
             }
         }
     },
     "objects": {
-        "TermSheet": {
+        "Irl_Term_Sheet": {
             "APR": {
                 "type": "string",
                 "required": true
@@ -17,23 +17,23 @@
                 "type": "string",
                 "required": true
             },
-            "AmountUSDC": {
+            "PoolName": {
                 "type": "string",
                 "required": true
             },
+            "LoanPaidTo": {
+                "type": "string",
+                "required": false
+            },
             "DefaultDays": {
-                "type": "integer",
-                "required": true
+                "type": "string",
+                "required": false
             },
             "LoanEndDate": {
                 "type": "string",
                 "required": true
             },
-            "LoanPaidOutTo": {
-                "type": "string",
-                "required": true
-            },
-            "LoanStartDate": {
+            "AmountPerPeriod": {
                 "type": "string",
                 "required": true
             },
@@ -45,6 +45,10 @@
                 "type": "string",
                 "required": true
             },
+            "AuthorizedLenders": {
+                "type": "string",
+                "required": false
+            },
             "RepaymentStartDate": {
                 "type": "string",
                 "required": true
@@ -53,9 +57,9 @@
     },
     "enums": {},
     "accountData": {
-        "termSheetList": {
+        "irlTermSheetList": {
             "type": "connection",
-            "name": "TermSheet"
+            "name": "Irl_Term_Sheet"
         }
     }
 }
