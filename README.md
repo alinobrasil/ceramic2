@@ -36,7 +36,7 @@ Install PNPM: https://pnpm.io/installation
 This project contains stuff from ceramic's eth denver workshop:
 https://github.com/ceramicstudio/ethdenver-workshop
 
-If you run "npm run dev", it's going to load up an unnecessary nextJS app. 
+If you run "npm run dev", it's going to load up a webapp, which the rest of this repo no longer supports. 
 
 ## How to add new models
 
