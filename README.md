@@ -41,5 +41,7 @@ THe output file contains modelID.
 
 4. The JS one is needed by the IRL-trust project's front end app. 
 Copy and paste it into IRL-Trust/src/composedb/
+replace the existing one.
+
 
 

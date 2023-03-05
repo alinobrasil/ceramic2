@@ -1,11 +1,13 @@
-type Irl_Term_Sheet @createModel(
+type IrlTermsheet @createModel(
     accountRelation: LIST, 
     description: "IRL-Trust Term Sheet for borrowing/lending") 
     {
         PoolName: String! @string(minLength: 1, maxLength: 500)
+        PoolAddress: String! @string(minLength: 1, maxLength: 200)
         TermsDescription: String! @string(minLength: 1, maxLength: 500)
         AmountPerPeriod: String! @string(minLength: 1, maxLength: 100)
-        AuthorizedLenders: String @string(minLength: 1, maxLength: 500)
+        WithdrawPeriodLength: String! @string(minLength: 1, maxLength: 100)
+        AuthorizedLenders: String! @string(minLength: 1, maxLength: 500)
         LoanPaidTo: String @string(minLength: 1, maxLength: 500)
         LoanEndDate: String @string(minLength: 1, maxLength: 100)
         APR: String! @string(minLength: 1, maxLength: 10)
