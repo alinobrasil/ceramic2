@@ -36,7 +36,11 @@ THe output file contains modelID.
 ```npx composedb composite:deploy output/composite.json --ceramic-url=http://localhost:7007 --did-private-key=$DPK```
 
 3. create run-time composite files
+
+
 ```npx composedb composite:compile output/composite.json runtime-composite.json```
+
+
 ```npx composedb composite:compile output/composite.json runtime-composite.js```
 
 4. The JS one is needed by the IRL-trust project's front end app. 
